@@ -82,3 +82,14 @@ let orders = [
 ];
 
 // Start coding here
+function serachCard (creditCardType) {
+    let result=[];
+    for (let index=0; index<orders.length; index++) {
+      if (orders[index].creditCardType===creditCardType) {
+            result.push(orders[index]);
+      }
+    }
+    return result;
+}
+
+console.log(serachCard('jcb'))

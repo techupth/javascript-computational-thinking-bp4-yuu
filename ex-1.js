@@ -82,3 +82,22 @@ let orders = [
 ];
 
 // Start coding here
+function maxProductPrice (orders) {
+  let maxPrice;
+  let result;  
+  for (let index =0; index<orders.length; index++) {
+      if (maxPrice>orders[index].productPrice) {
+        maxPrice=maxPrice;
+      } else {
+        maxPrice=orders[index].productPrice;
+      };
+    for (let i =0; i<orders.length; i++) {
+        if (orders[i].productPrice===maxPrice) {
+            result = orders[i];
+        };
+      };
+    }
+    return result; 
+}
+
+console.log(maxProductPrice(orders))

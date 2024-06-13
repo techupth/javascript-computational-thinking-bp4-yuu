@@ -82,3 +82,15 @@ let orders = [
 ];
 
 // Start coding here
+function searchCustomer (customerName) {
+    let result;
+    for (let index=0; index<orders.length; index++) {
+          if(customerName===orders[index].customerName) {
+            result = console.log(`Total paid amount of ${customerName}: ${orders[index].productPrice*orders[index].productQuantity} Baht`);
+          };
+
+    };
+    return result
+}
+
+searchCustomer(`Birdie Shepland`)
